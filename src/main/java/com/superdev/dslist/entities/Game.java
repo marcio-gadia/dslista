@@ -1,5 +1,6 @@
 package com.superdev.dslist.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,7 +20,11 @@ public class Game {
     private String platforms;
     private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     public Game() {
